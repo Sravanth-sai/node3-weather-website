@@ -19,15 +19,16 @@ weatherForm.addEventListener('submit', (e) => {
     message2.textContent = ''
     const location = search.value
 
-    fetch('http://localhost:3000/weather?address='+location).then( (response) => {
+
+
+    fetch('/weather?address='+ location).then( (response) => {
         response.json().then( (data) => {
             if (data.error) {
                 message1.textContent = data.error
                 input.style.border = '1.5px solid red'
                 message1.style.color = 'red'
 
-            }
-            else {
+            } else {
                 message1.textContent = data.location
                 message2.textContent = data.weather
             }
