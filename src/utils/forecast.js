@@ -23,7 +23,10 @@ const forecast = (latitude, longitude, callback) => {
                 ". It's currently "+response.body.current.temperature+
                     " out, feels like "+response.body.current.feelslike+
                     ". There is a "+response.body.current.precip+
-                    "% chance of rain."
+                    "% chance of rain.",
+                icon: response.body.current.weather_icons[0],
+                humidity: response.body.current.humidity
+
             }
             callback(undefined,info)
 

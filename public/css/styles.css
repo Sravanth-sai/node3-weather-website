@@ -62,3 +62,7 @@ button:hover {
     background: #888888;
 }
 
+#icon {
+    display: none;
+    text-align: center;
+}
